@@ -1,0 +1,64 @@
+---
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+import { Icon } from "astro-icon/components";
+import I18nKey from "../i18n/i18nKey";
+import { i18n } from "../i18n/translation";
+import { url } from "../utils/url-utils";
+
+const contactMethods = [
+  {
+    name: "QQ",
+    value: "1875690499",
+    icon: "fa6-brands:qq",
+    color: "#0099FF",
+    desc: "随时通过 QQ 与我联系",
+  },
+  {
+    name: "微信",
+    value: "13110560963",
+    icon: "fa6-brands:weixin",
+    color: "#07C160",
+    desc: "扫描二维码或搜索微信号",
+  },
+  {
+    name: "Telegram",
+    value: "13110560963",
+    icon: "fa6-brands:telegram",
+    color: "#24A1DE",
+    desc: "小飞机在线沟通",
+  },
+];
+---
+
+<MainGridLayout title={i18n(I18nKey.contact)} description={i18n(I18nKey.contact)}>
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+        <div class="card-base z-10 px-9 py-12 relative w-full">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-90 mb-4">{i18n(I18nKey.contact)}</h1>
+                <p class="text-50">期待与您的交流与合作</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {contactMethods.map((method) => (
+                    <div class="group card-base border border-black/5 dark:border-white/5 p-8 flex flex-col items-center transition-all hover:-translate-y-2 hover:shadow-xl active:scale-95">
+                        <div 
+                            class="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-12"
+                            style={`background-color: ${method.color}20; color: ${method.color}`}
+                        >
+                            <Icon name={method.icon} class="text-4xl" />
+                        </div>
+                        <h2 class="text-xl font-bold text-90 mb-2">{method.name}</h2>
+                        <p class="text-sm text-50 mb-4">{method.desc}</p>
+                        <div class="bg-black/[0.03] dark:bg-white/[0.03] px-4 py-2 rounded-lg font-mono text-lg text-[var(--primary)] border border-black/5 dark:border-white/5 select-all">
+                            {method.value}
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div class="mt-16 p-8 rounded-2xl bg-[var(--primary)] bg-opacity-5 border border-[var(--primary)] border-opacity-10 text-center">
+                <p class="text-75 italic">"沟通是理解的桥梁，欢迎随时留言。"</p>
+            </div>
+        </div>
+    </div>
+</MainGridLayout>

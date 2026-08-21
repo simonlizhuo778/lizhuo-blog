@@ -32,6 +32,26 @@ enum I18nKey {
 	author = "author",
 	publishedAt = "publishedAt",
 	license = "license",
+
+	backToTop = "backToTop",
+	prevPage = "prevPage",
+	nextPage = "nextPage",
+	displaySettings = "displaySettings",
+	resetToDefault = "resetToDefault",
+	goToAboutPage = "goToAboutPage",
+	profileImage = "profileImage",
+	menu = "menu",
+	lightDarkMode = "lightDarkMode",
+	searchPlaceholder = "searchPlaceholder",
+	pageCount = "pageCount",
+	coverImage = "coverImage",
+	viewPostsInCategory = "viewPostsInCategory",
+	viewPostsWithTag = "viewPostsWithTag",
+	allRightsReserved = "allRightsReserved",
+	poweredBy = "poweredBy",
+	bannerImage = "bannerImage",
+	visitImageSource = "visitImageSource",
+	contact = "contact",
 }
 
 export default I18nKey;
