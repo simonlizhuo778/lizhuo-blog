@@ -20,15 +20,15 @@ jobs:
     name: Build
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+        uses: pnpm/action-setup@v4
         with:
           run_install: false
 
@@ -39,10 +39,10 @@ jobs:
         run: pnpm build
 
       - name: Setup Pages
-        uses: actions/configure-pages@983dcca6d6b9f2a5a7b0d5e0e4b8e8e8e8e8e8e8 # v5.0.0
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@56afc609e74202633dff900484513663ad8f3046 # v3.0.1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
@@ -56,4 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86a2a6cdd07e7fc6233b6e8f16 # v4.0.5
+        uses: actions/deploy-pages@v4
