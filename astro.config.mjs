@@ -24,10 +24,16 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 
+// Vercel serves from the domain root, GitHub Pages from the /lizhuo-blog/ subpath.
+// Vercel sets VERCEL=1 during builds.
+const isVercel = !!process.env.VERCEL;
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://simonlizhuo778.github.io/lizhuo-blog/",
-	base: "/lizhuo-blog/",
+	site: isVercel
+		? "https://lizhuo-blog.vercel.app/"
+		: "https://simonlizhuo778.github.io/lizhuo-blog/",
+	base: isVercel ? "/" : "/lizhuo-blog/",
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
