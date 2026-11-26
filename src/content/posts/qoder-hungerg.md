@@ -4,7 +4,7 @@ published: 2026-11-26
 description: Qoder 上线匿名模型 HungerG，11 月 23 日至 30 日免费体验 7 天。与其听别人评价，不如用真实开发任务亲自测一测。
 tags: [Qoder, AI, 编程]
 category: 思考
-draft: true
+draft: false
 ---
 
 ## 一个不报履历的“新选手”
