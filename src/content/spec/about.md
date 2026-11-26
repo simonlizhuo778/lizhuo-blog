@@ -1,7 +1,7 @@
 # 关于
-这是 [Fuwari](https://github.com/saicaca/fuwari) 的演示站点。
+这是我的个人博客，源码托管在 [GitHub](https://github.com/simonlizhuo778/lizhuo-blog)。
 
-::github{repo="saicaca/fuwari"}
+::github{repo="simonlizhuo778/lizhuo-blog"}
 
 > ### 本站使用的图片来源
 > - [Unsplash](https://unsplash.com/)
